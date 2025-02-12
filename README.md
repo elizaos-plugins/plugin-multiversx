@@ -26,8 +26,33 @@ Reuse providers and utilities from the existing actions where possible. Add more
 
 ## Installation
 
+In your Eliza project, go to /packages
 ```bash
-pnpm install @elizaos/plugin-multiversx
+cd packages```
+
+Clone the plugin into /packages
+```bash
+git clone https://github.com/elizaos-plugins/plugin-multiversx.git plugin-multiversx
+```
+
+Get back to root
+```bash
+cd ../
+```
+
+Add the plugin workspace into /agent
+```bash
+pnpm add @elizaos-plugins/plugin-multiversx@workspace:* --filter ./agent
+```
+
+Update core workspace
+```bash
+pnpm add @elizaos/core@workspace:* --filter ./packages/plugin-multiversx
+```
+
+Add the plugin in your charactersfile
+```json
+"plugins": ["@elizaos-plugins/plugin-multiversx"],
 ```
 
 ## Configuration
