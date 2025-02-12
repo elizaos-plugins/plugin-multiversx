@@ -28,7 +28,8 @@ Reuse providers and utilities from the existing actions where possible. Add more
 
 In your Eliza project, go to /packages
 ```bash
-cd packages```
+cd packages
+```
 
 Clone the plugin into /packages
 ```bash
