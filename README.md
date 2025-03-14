@@ -1,4 +1,4 @@
-# @elizaos/plugin-multiversx
+# @elizaos/plugin-multiversx / AI_MEGAWAVE HACKATHON VERSION
 
 MultiversX blockchain integration plugin for Eliza OS that enables on chain actions.
 
@@ -13,6 +13,7 @@ This plugin aims to be the basis of all interactions with the MultiversX ecosyst
 - Pool creation on xExchange
 - Swap tokens
 - Lend EGLD on Hatom
+- Warp Creation
 - Wallet balance recovery
 - Multiple network support (mainnet, devnet, testnet)
 - Secure transaction signing
@@ -20,6 +21,10 @@ This plugin aims to be the basis of all interactions with the MultiversX ecosyst
 - Transaction status tracking
 - Built-in denomination handling
 - Comprehensive error handling
+
+## Prerequisites
+
+To use the Receive_EGLD action of this plugin, you must set up a QR Code API. The implementation is available here: [QrCode_generator](https://github.com/elpulpo0/QrCode_generator).
 
 ## Adding a new action
 
@@ -42,6 +47,7 @@ The plugin requires environment variables or runtime settings:
 MVX_PRIVATE_KEY=your-wallet-private-key
 MVX_NETWORK=devnet  # mainnet, devnet, or testnet
 ACCESS_TOKEN_MANAGEMENT_TO=everyone  # you can put an userid to limit token managament to one user only (use same id as in the database)
+QR_CODE_API_URL=  
 ```
 
 ## Usage
@@ -129,6 +135,17 @@ const result = await eliza.execute({
         quoteTokenID: "EGLD",
         baseAmount: "1000000",
         quoteAmount: "20"
+    },
+});
+```
+
+### Birthday Warp Creation
+
+```typescript
+const result = await eliza.execute({
+    action: "CREATE_BIRTHDAY_WARP",
+    content: {
+        walletAddress: "erd1ezxnz5lywd5zpcnl7x3u74vc60tgjxdnga3s0608gmnx6rsxmwhqudsllw"
     },
 });
 ```

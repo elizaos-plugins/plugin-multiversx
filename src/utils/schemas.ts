@@ -52,3 +52,7 @@ export const poolSchema = z.object({
 export const lendegldSchema = z.object({
     amount: z.string().min(1, { message: "Amount is required." }),
 });
+
+export const birthdayWarpSchema = z.object({
+    walletAddress: z.string().min(1, { message: "walletAddress is required." }),
+});
