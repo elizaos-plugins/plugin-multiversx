@@ -13,7 +13,6 @@ This plugin aims to be the basis of all interactions with the MultiversX ecosyst
 - Pool creation on xExchange
 - Swap tokens
 - Lend EGLD on Hatom
-- Warp Creation
 - Wallet balance recovery
 - Multiple network support (mainnet, devnet, testnet)
 - Secure transaction signing
@@ -135,17 +134,6 @@ const result = await eliza.execute({
         quoteTokenID: "EGLD",
         baseAmount: "1000000",
         quoteAmount: "20"
-    },
-});
-```
-
-### Birthday Warp Creation
-
-```typescript
-const result = await eliza.execute({
-    action: "CREATE_BIRTHDAY_WARP",
-    content: {
-        walletAddress: "erd1ezxnz5lywd5zpcnl7x3u74vc60tgjxdnga3s0608gmnx6rsxmwhqudsllw"
     },
 });
 ```
