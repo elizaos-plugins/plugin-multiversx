@@ -1,4 +1,4 @@
-# @elizaos/plugin-multiversx / AI_MEGAWAVE HACKATHON VERSION
+# @elizaos/plugin-multiversx
 
 MultiversX blockchain integration plugin for Eliza OS that enables on chain actions.
 
